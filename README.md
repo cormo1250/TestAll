@@ -1,1 +1,1 @@
-# TestAll
+# Manual and automation tests.
