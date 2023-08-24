@@ -66,7 +66,7 @@ public class AutomationStorePaymentStepDefs {
 
     //nowy
     @Given("I open home page of Automation Store, click ona account baner and login with correct credentials login {string} and password {string}")
-    public void iOpenHomePageOfAutomationStoreClickOnaAccountBanerAndLoginWithCorrectCredentialsLoginAndPassword(String login, String password) {
+    public void openHomePageAndLogIn(String login, String password) {
         webDriver.get("https://automationteststore.com");
         WebElement element = webDriver.findElement(By.cssSelector("div#customernav a[href]"));
         element.click();
@@ -77,7 +77,7 @@ public class AutomationStorePaymentStepDefs {
     }
 
     @When("I go to cattegory -> Apparel & Accessories -> Shoes and click on red sandals")
-    public void iGoToCattegoryApparelAccessoriesShoesAndClickOnRedSandals() {
+    public void goToShoesRed() {
         WebElement element = webDriver.findElement(By.cssSelector("#categorymenu > nav > ul > li:nth-child(2) > a"));
         element.click();
         WebElement element2 = webDriver.findElement(By.cssSelector("#maincontainer > div > div > div > div > ul > li:nth-child(1) > div > a"));
@@ -88,7 +88,7 @@ public class AutomationStorePaymentStepDefs {
     }
 
     @And("I choose size 4 UK, change quantity to {string}, click add to cart button, click checkout and confirm order")
-    public void iChooseSizeUKChangeQuantityToClickAddToCartButtonClickCheckoutAndConfirmOrder(String quanity) {
+    public void choseSizeConfirm(String quanity) {
         WebElement element = webDriver.findElement(By.cssSelector("#option344748"));
         element.click();
         WebElement element2 = webDriver.findElement(By.cssSelector("#product_quantity"));
@@ -116,7 +116,7 @@ public class AutomationStorePaymentStepDefs {
     }
 
     @And("I choose size {int} UK \\(from 3, 4, 5, 6), change quantity to {string}, click add to cart button, click checkout and confirm order")
-    public void iChooseSizeUKFromChangeQuantityToClickAddToCartButtonClickCheckoutAndConfirmOrder(int size, String quanity) {
+    public void chooseSizeIfOrder(int size, String quanity) {
         if (size == 3) {
             WebElement element = webDriver.findElement(By.cssSelector("#option344747"));
             element.click();

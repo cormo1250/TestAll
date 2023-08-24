@@ -73,14 +73,14 @@ public class AutomationStoreStepDef {
     }
 
     @When("I type {string} as login, {string} as password in login page and click login button")
-    public void iTypeAsLoginAndAsPasswordInLoginPage(String login, String password) {
+    public void loginPassswordLog(String login, String password) {
         iTypeAsLoginInLoginPage(login);
         iTypeAsPasswordInLoginPage(password);
         iClickLoginButton();
     }
 
     @Given("I open home page of Automation Store and click on account baner")
-    public void iOpenHomePageOfAutomationStoreAndClickOnAccountBaner() {
+    public void openHpAndAccount() {
     iOpenLoginPageAutomationStore();
     iClickOnAccountBaner();
     }
